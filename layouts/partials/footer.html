@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer id="{{ if and (lt (len .Site.Pages) 2) (.IsHome) }}footer-no-border{{ else }}footer{{end}}">
     {{ if .Site.Social }}
         {{ partial "social.html" . }}
     {{ end }}
